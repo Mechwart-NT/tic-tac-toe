@@ -1,5 +1,6 @@
 import { createContext, useState } from "react"
 import GameField from "./components/GameField"
+import Navbar from "./components/Navbar"
 
 export const GameContext = createContext()
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
     <GameContext.Provider value={{xRound: isXRound, toggleRound: toggleRound}}>
+      <Navbar/>
       <GameField/>
     </GameContext.Provider>
     </>

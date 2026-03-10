@@ -4,6 +4,7 @@
   --shadow-color: #102129;
   --x-color: #31c4be;
   --o-color: #f2b236;
+  --grayish: #506773;
 }
 
 *{
@@ -45,4 +46,35 @@ body{
 
 .x{
   color: var(--x-color);
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+
+  .logo{
+    font-size: 3rem;
+  }
+  .current{
+    background-color: var(--tile-color);
+    padding: 10px 20px;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px var(--shadow-color);
+    color: var(--grayish);
+
+    span{
+      text-transform: uppercase;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
