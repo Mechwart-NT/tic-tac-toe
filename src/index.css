@@ -1,0 +1,48 @@
+:root{
+  --bg-color: #192a32;
+  --tile-color: #1f3540;
+  --shadow-color: #102129;
+  --x-color: #31c4be;
+  --o-color: #f2b236;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.tile{
+  background: var(--tile-color);
+  box-shadow: 0px 10px 0px var(--shadow-color);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 5rem;
+}
+
+.gameField{
+  display: grid;
+  width: min(80vw, 80vh);
+  max-width: 700px;
+  gap: 20px;
+  aspect-ratio: 1 / 1;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.o{
+  color: var(--o-color);
+}
+
+.x{
+  color: var(--x-color);
+}
