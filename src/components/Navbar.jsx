@@ -1,8 +1,9 @@
 import { useContext } from "react"
-import { GameContext } from "../App"
+import { GameContext, LightContext } from "../App"
 
 const Navbar = () => {
   const {xRound} = useContext(GameContext)
+  const {isLight, toggleLight} = useContext(LightContext)
   return (
     <nav>
         <div className="logo">
@@ -17,7 +18,16 @@ const Navbar = () => {
                 <i className="fa-solid fa-o"></i>
             } <span>turn</span>
         </div>
-        <button>🌞</button>
+        
+        <div className="buttonHolder">
+          <button onClick={toggleLight}>
+            {
+              isLight ? 
+              <i class="fa-regular fa-sun"></i> :
+              <i class="fa-regular fa-moon"></i>
+            }
+          </button>
+        </div>
     </nav>
   )
 }
