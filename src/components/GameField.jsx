@@ -1,12 +1,9 @@
 import Tile from "./Tile"
 
-const GameField = (props) => {
+const GameField = () => {
   return (
     <section className="gameField">
-        { [...Array(9)].map( _ => <Tile 
-          xRound={props.xRound} 
-          toggleRound={props.toggleRound} 
-        />) }
+        { [...Array(9)].map( _ => <Tile/>) }
     </section>
   )
 }

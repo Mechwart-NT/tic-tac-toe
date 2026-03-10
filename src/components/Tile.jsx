@@ -1,13 +1,15 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { GameContext } from "../App"
 
-const Tile = (props) => {
+const Tile = () => {
   const [symbol, setSymbol] = useState("")
+  const {xRound, toggleRound} = useContext(GameContext)
 
   const clickHappend = () => {
     if(symbol != "") return;
 
-    setSymbol(props.xRound ? "x" : "o")
-    props.toggleRound()
+    setSymbol(xRound ? "x" : "o")
+    toggleRound()
   }
 
   return (
